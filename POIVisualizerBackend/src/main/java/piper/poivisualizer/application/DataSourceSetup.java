@@ -22,7 +22,7 @@ public class DataSourceSetup {
 		dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
 		dataSource.setUsername("wildfly");
 		dataSource.setPassword("teste");
-		dataSource.setUrl("jdbc:mysql://localhost:3306/POIVisualizerDB?createDatabaseIfNotExist=true&serverTimezone=UTC");
+		dataSource.setUrl("jdbc:mysql://localhost:3306/POIVisualizerDB?createDatabaseIfNotExist=true&Timezone=true&serverTimezone=America/Sao_Paulo");
 
 		return dataSource;
 	}
