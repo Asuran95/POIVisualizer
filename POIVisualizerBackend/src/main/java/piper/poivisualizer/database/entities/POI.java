@@ -22,30 +22,38 @@ public class POI {
 	public long getId() {
 		return id;
 	}
+	
 	public void setId(long id) {
 		this.id = id;
 	}
+	
 	public String getName() {
 		return name;
 	}
+	
 	public void setName(String name) {
 		this.name = name;
 	}
 	public int getRaio() {
 		return raio;
 	}
+	
 	public void setRaio(int raio) {
 		this.raio = raio;
 	}
+	
 	public double getLatitude() {
 		return latitude;
 	}
+	
 	public void setLatitude(double latitude) {
 		this.latitude = latitude;
 	}
+	
 	public double getLongitude() {
 		return longitude;
 	}
+	
 	public void setLongitude(double longitude) {
 		this.longitude = longitude;
 	}

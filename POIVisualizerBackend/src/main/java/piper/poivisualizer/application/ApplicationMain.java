@@ -14,9 +14,6 @@ import piper.poivisualizer.database.entities.Vehicle;
 @SpringBootApplication
 public class ApplicationMain {
 	
-	@Autowired
-	VehicleEAO vehicleEao;
-	
 	public static void main(String[] args) {
 
 		Logger logger = LoggerFactory.getLogger(ApplicationMain.class);
@@ -28,16 +25,5 @@ public class ApplicationMain {
 		SpringApplication.run(ApplicationMain.class, args);
 	}
 	
-	@EventListener(ApplicationReadyEvent.class)
-	public void doSomethingAfterStartup() {
-	    System.out.println("hello world, I have just started up");
-	    
-	    Vehicle vehicle = new Vehicle();
-	    
-	    
-	    vehicle.setPlaca("teste");
-	    
-	    vehicleEao.save(vehicle);
-	    
-	}
+	
 }
