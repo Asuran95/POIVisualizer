@@ -7,6 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity
 public class VehiclePosition {
@@ -18,7 +20,9 @@ public class VehiclePosition {
 	@ManyToOne
 	private Vehicle vehicle;
 	
+	@Temporal(TemporalType.TIMESTAMP)
 	private Date date;
+	
 	private int speed;
 	private double longitude;
 	private double latitude;
