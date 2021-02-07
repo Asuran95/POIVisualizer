@@ -14,21 +14,27 @@ public class POIVisualizerFilterDTO implements Serializable {
 	public String getPlaca() {
 		return placa;
 	}
+	
 	public void setPlaca(String placa) {
 		this.placa = placa;
 	}
+	
 	public Date getDataInicial() {
 		return dataInicial;
 	}
+	
 	public void setDataInicial(Date dataInicial) {
 		this.dataInicial = dataInicial;
 	}
+	
 	public Date getDataFinal() {
 		return dataFinal;
 	}
+	
 	public void setDataFinal(Date dataFinal) {
 		this.dataFinal = dataFinal;
 	}
+	
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}

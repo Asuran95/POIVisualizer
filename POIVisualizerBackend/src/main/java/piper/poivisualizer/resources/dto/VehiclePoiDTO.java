@@ -7,7 +7,7 @@ public class VehiclePoiDTO implements Serializable {
 	private static final long serialVersionUID = -419487519620836994L;
 	
 	private String placa;
-	private double minutos;
+	private long tempoMilliseconds;
 	
 	public String getPlaca() {
 		return placa;
@@ -16,12 +16,12 @@ public class VehiclePoiDTO implements Serializable {
 	public void setPlaca(String placa) {
 		this.placa = placa;
 	}
-	
-	public double getMinutos() {
-		return minutos;
+
+	public long getTempoMilliseconds() {
+		return tempoMilliseconds;
 	}
-	
-	public void setMinutos(double minutos) {
-		this.minutos = minutos;
+
+	public void setTempoMilliseconds(long tempoMilliseconds) {
+		this.tempoMilliseconds = tempoMilliseconds;
 	}
 }
