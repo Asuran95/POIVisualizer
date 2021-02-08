@@ -7,9 +7,10 @@ public class POIVisualizerFilterDTO implements Serializable {
 
 	private static final long serialVersionUID = 5488840321891278748L;
 	
+	private POIDTO poidto;
 	private String placa;
 	private Date dataInicial;
-	private Date dataFinal;	
+	private Date dataFinal;
 	
 	public String getPlaca() {
 		return placa;
@@ -38,4 +39,14 @@ public class POIVisualizerFilterDTO implements Serializable {
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
+
+	public POIDTO getPoidto() {
+		return poidto;
+	}
+
+	public void setPoidto(POIDTO poidto) {
+		this.poidto = poidto;
+	}
+	
+	
 }
