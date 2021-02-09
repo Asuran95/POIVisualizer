@@ -2,20 +2,58 @@
   <div class="p-d-flex p-flex-column">
     <div class="p-mb-2 p-shadow-4 content-padding card-borders">
 
+      <h2>POI Visualizer</h2>
 
+      <div class="p-fluid p-formgrid p-grid">
 
-      <h1>POI</h1>
-      <p-table [value]="cars">
+        <div class="p-field p-col">
+          <label for="selectedPoi">POI</label>
+
+          <p-dropdown [options]="pois" [(ngModel)]="selectedPoi" optionLabel="name">
+          </p-dropdown>
+
+        </div>
+
+        <div class="p-field p-col">
+          <label for="placa">Placa</label>
+          <input type="text" pInputText [(ngModel)]="placa" />
+        </div>
+
+        <div class="p-field p-col">
+          <label for="dataIncial">Data Inicial</label>
+          <p-calendar 
+            inputId="dataIncial" 
+            dateFormat="dd/mm/yy" 
+            [(ngModel)]="dataInicial">
+          </p-calendar>
+        </div>
+
+        <div class="p-field p-col">
+          <label for="dataFinal">Data Final</label>
+          <p-calendar 
+            inputId="dataFinal" 
+            dateFormat="dd/mm/yy" 
+            [(ngModel)]="dataFinal">
+          </p-calendar>
+        </div>
+
+        <div class="p-field p-col">
+          <label for="consultarBotao" style="visibility: hidden;">Consultar</label>
+          <p-button inputId="consultarBotao"  (onClick)="consultar()" label="Consultar" ></p-button>
+        </div>
+      </div>
+      
+      <p-table [value]="veiculos">
         <ng-template pTemplate="header">
           <tr>
             <th>Placa</th>
             <th>Tempo</th>
           </tr>
         </ng-template>
-        <ng-template pTemplate="body" let-car>
+        <ng-template pTemplate="body" let-veiculo>
           <tr>
-            <td>{{car.placa}}</td>
-            <td>{{car.tempo}}</td>
+            <td>{{veiculo.placa}}</td>
+            <td>{{veiculo.tempoMilliseconds | temporalPresent}}</td>
           </tr>
         </ng-template>
       </p-table>

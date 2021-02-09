@@ -4,12 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import piper.poivisualizer.application.ApplicationMain;
 import piper.poivisualizer.database.eao.PoiEAO;
 import piper.poivisualizer.database.eao.VehicleEAO;
 import piper.poivisualizer.database.eao.VehiclePostionEAO;
@@ -19,7 +16,6 @@ import piper.poivisualizer.database.entities.VehiclePosition;
 import piper.poivisualizer.exceptions.InvalidPOIException;
 import piper.poivisualizer.resources.dto.POIResultDTO;
 import piper.poivisualizer.resources.dto.POIVisualizerFilterDTO;
-import piper.poivisualizer.resources.dto.POIResultDTO;
 import piper.poivisualizer.resources.dto.VehiclePoiDTO;
 import piper.poivisualizer.utils.CoordinatesUtil;
 
